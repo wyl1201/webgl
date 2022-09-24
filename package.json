@@ -33,5 +33,8 @@
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
     "vite": "^3.1.3"
+  },
+  "dependencies": {
+    "three": "^0.144.0"
   }
 }
