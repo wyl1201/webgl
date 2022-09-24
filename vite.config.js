@@ -10,9 +10,13 @@ function getInput(dir) {
   }, {})
 }
 
-console.log(getInput('three'))
-
 export default defineConfig({
+  resolve: {
+    alias: {
+      '~': resolve(__dirname, './'),
+      '@': resolve(__dirname, './src')
+    }
+  },
   build: {
     rollupOptions: {
       input: {

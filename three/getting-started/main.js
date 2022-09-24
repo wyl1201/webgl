@@ -1,3 +1,8 @@
-import WebGL from 'https://github.com/mrdoob/three.js/blob/master/examples/jsm/capabilities/WebGL.js'
+import WebGL from '@/lib/WebGL'
 
-console.log(WebGL.isWebGLAvailable())
+if (WebGL.isWebGLAvailable()) {
+  console.log(WebGL.isWebGLAvailable())
+} else {
+  const warning = WebGL.getWebGLErrorMessage()
+  document.getElementById('app').appendChild(warning)
+}
