@@ -11,6 +11,7 @@ function getInput(dir) {
 }
 
 export default defineConfig({
+  assetsInclude: ['**/*.gltf', '**/*.glb'],
   resolve: {
     alias: {
       '~': resolve(__dirname, './'),
