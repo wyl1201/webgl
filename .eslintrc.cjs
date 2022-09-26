@@ -10,7 +10,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module'
   },
-  plugins: ['prettier'],
+  plugins: ['html', 'prettier'],
   rules: {
     'prettier/prettier': 'error'
   }
