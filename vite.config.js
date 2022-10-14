@@ -2,6 +2,7 @@
 import { readdirSync } from 'fs'
 import { resolve } from 'path'
 import { defineConfig } from 'vite'
+import { viteCommonjs } from '@originjs/vite-plugin-commonjs'
 
 function getInput(dir) {
   return readdirSync(resolve(__dirname, dir)).reduce((pages, page) => {
@@ -23,8 +24,10 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         ...getInput('pages'),
-        ...getInput('three')
+        ...getInput('three'),
+        ...getInput('webgl')
       }
     }
-  }
+  },
+  plugins: [viteCommonjs()]
 })
